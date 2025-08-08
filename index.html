@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte Técnico</title>
+  <link rel="stylesheet" href="css/suporte.css">
+  <script src="javascript/validar.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <img src="imagens/logo.png" alt="Logo SENAI" class="logo">
+      <h2>Solicitação de Suporte Técnico</h2>
+    </header>
+
+    <form onsubmit="return Obrigatorio()">
+      <div class="form-group">
+        <label for="usuario">Nome do Usuário:</label>
+        <input type="text" id="usuario" name="usuario" >
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail de contato:</label>
+        <input type="email" id="email" name="email" >
+      </div>
+
+      <div class="form-group">
+        <label for="categoria">Categoria do Problema:</label>
+        <select id="categoria" name="categoria" >
+          <option value="">Selecione</option>
+          <option value="hardware">Hardware</option>
+          <option value="software">Software</option>
+          <option value="rede">Rede</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="descricao">Descrição detalhada:</label>
+        <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva o problema encontrado com detalhes"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="screenshot">Anexar imagem (opcional):</label>
+        <input type="file" id="screenshot" name="screenshot" accept="image/*">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="urgencia">Nível de urgência:</label>
+          <select id="urgencia" name="urgencia">
+            <option value="">Selecione</option>
+            <option value="baixa">Baixa</option>
+            <option value="media">Média</option>
+            <option value="alta">Alta</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="horario">Melhor horário para contato:</label>
+          <input type="time" id="horario" name="horario">
+        </div>
+      </div>
+
+      <button type="submit">Solicitar Suporte</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
